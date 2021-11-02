@@ -1,0 +1,79 @@
+#peli {
+    text-decoration: none;
+    #dato {
+        color: black;
+    }
+    #title {
+        font-size: 20px;
+        color: #032541;
+    }
+    article {
+        &:hover {
+            -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15);
+        }
+        margin-left: auto;
+        margin-right: auto;
+        border-color: darkslategrey;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 15px;
+        width: 320px;
+        height: 450px;
+        margin-bottom: 5px;
+    }
+    #img {
+        width: 240px;
+        height: 333px;
+        margin-bottom: 10px;
+    }
+    header {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+#s1 {
+    background-color: black;
+    height: 250px;
+    padding-top: 90px;
+}
+#s2 {
+    height: 100%;
+    background-color: whitesmoke;
+    #logo {
+        width: 30%;
+    }
+}
+
+#nav {
+    background-color: #032541;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.movie-grid {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 500px;
+    margin-top: 50px;
+}
+#tit1 {
+    margin-top: 25px;
+    color: darkorange;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+#app {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#logo {
+    width: 30%;
+  }
