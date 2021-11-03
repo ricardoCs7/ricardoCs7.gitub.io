@@ -27,7 +27,6 @@ const routes = [
         component: Movie,
     },
 
-
 ];
 
 const router = createRouter({
