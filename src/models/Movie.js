@@ -1,6 +1,7 @@
 class Movie {
     constructor(movie = {}) {
     this.id = movie.id;
+    this.runtime=movie.runtime;
     this.original_language = movie.original_language;
     this.original_title = movie.original_title;
     this.adult = movie.adult;

@@ -17,7 +17,7 @@
       </span>
     </div>
     <div id="dato"><b>Valoración:</b> {{ movie.popularity }}
-      <span><i class="bi bi-star-fill"></i>
+      <span><i style="color: gold;" class="bi bi-star-fill"></i>
     </span>
     </div>
  

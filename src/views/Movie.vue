@@ -2,22 +2,56 @@
   <div id="infoPeli" class="container">
     <div class="row">
       <div class="col">
-        <img id="foto" :src="`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`" />
+        <img
+          id="foto"
+          :src="`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`"
+        />
       </div>
       <div id="resumen" class="col">
         <h1>{{ movie.title }}</h1>
+        <span><b>Duración:</b> {{movie.runtime}} minutos</span>
+        <br>
         <br>
         <p>{{ movie.overview }}</p>
       </div>
     </div>
-    <br>
-    <div id="multimedia" class="row">
-      <div class="col"><button type="button" class="btn btn-primary"><i class="bi bi-play-circle"></i> Reproducir</button></div>
-      <div class="col"><button type="button" class="btn btn-info"><i class="bi bi-translate"></i> Cambiar Idioma</button></div>
-      <div class="col"><button type="button" class="btn btn-warning"><i class="bi bi-star"></i> Calificar</button></div>
+    <br />
+    <div class="row" id="data">
+      <div class="col"><b>FECHA:</b> {{ movie.release_date }} <i class="bi bi-calendar-event" style="color: red;"></i></div>
+      <div class="col">
+        <b>POPULARIDAD: </b> {{ movie.popularity }}<i class="bi bi-hand-thumbs-up"></i>
+      </div>
+      <div class="col">
+        <b>VALORACION: </b> {{ movie.vote_average }}
+        <i style="color: gold" class="bi bi-star-fill"></i>
+      </div>
     </div>
-    <br>
-    <div class="col"><button @click="$router.go(-1)" type="button" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i> Regresar</button></div>
+    <hr />
+    <div id="multimedia" class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary">
+          <i class="bi bi-play-circle"></i> Reproducir
+        </button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-info">
+          <i class="bi bi-translate"></i> Cambiar Idioma
+        </button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-warning">
+          <i class="bi bi-star"></i> Calificar
+        </button>
+      </div>
+    </div>
+    <hr />
+   <div class="row">
+      <div class="col">
+      <button @click="$router.go(-1)" type="button" class="btn btn-danger">
+        <i class="bi bi-arrow-left-circle"></i> Regresar
+      </button>
+    </div>
+   </div>
   </div>
   <router-view />
 </template>
@@ -42,6 +76,7 @@ export default {
     return {
       movieId: {},
       movie: {},
+      genres:[],
     };
   },
   mounted() {

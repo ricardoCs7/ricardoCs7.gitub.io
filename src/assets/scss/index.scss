@@ -89,9 +89,13 @@
     margin-top: 60px;
 }
 
+.container {
+    margin-bottom: 15px;
+}
+
 #infoPeli {
     margin-top: 70px;
-    #resumen{
+    #resumen {
         margin-bottom: 10px;
     }
     #foto {
@@ -103,11 +107,24 @@
         font-weight: bold;
         font-family: monospace;
         font-size: 3rem;
-        margin-top: 10px;
     }
     p {
         text-align: justify;
         font-size: 1.2rem;
+    }
+    hr {
+        color: darkblue;
+        height: 2px;
+    }
+    #data {
+        .col {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 16px;
+            border: 1.6px solid grey;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -119,6 +136,5 @@
         #foto {
             width: 450px;
         }
-        
     }
 }
