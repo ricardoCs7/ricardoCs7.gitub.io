@@ -15,10 +15,10 @@ export default {
 
 <template>
   <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="/">
+    <router-link class="navbar-brand" to="/">
     <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="Logo" style="width:200px;">
-  </a>
-    <button
+    </router-link>
+    <button id="navButton"
       class="navbar-toggler d-lg-none"
       type="button"
       data-bs-toggle="collapse"
@@ -33,10 +33,10 @@ export default {
           <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/rated" class="nav-link">Rated</router-link>
+          <router-link to="/rated" class="nav-link">Mejor Valoradas</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/popular" class="nav-link">Popular</router-link>
+          <router-link to="/popular" class="nav-link">Más Populares</router-link>
         </li>
       </ul>
     </div>

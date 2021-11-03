@@ -8,9 +8,9 @@
           alt=""
       /></span>
       <span><h1>WELLCOME</h1></span>
-      <h5>Interactuar con el Nav</h5>
+      <h5>Seleccionar en el nav, su preferencia</h5>
     </section>
-    <section id="s2"></section>
+  
   </div>
 </template>
 <script>
