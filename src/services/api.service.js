@@ -8,11 +8,11 @@ class ApiService {
         this.resource = axios.create({
             baseURL,
         });
-        this.apiKey = `api_key=${apiKey}&language=en-US`;
+        this.apiKey = `api_key=${apiKey}&language=es-ES`;
     }
     // Retorna las películas populares
     getPopular(currentPage) {
-        return this.resource.get(`popular?${this.apiKey}&page=${currentPage}?limit=20`);
+        return this.resource.get(`popular?${this.apiKey}&page=${currentPage}`);
     }
     // Retorna las películas mejores valoradas
     getTopRated(currentPage) {

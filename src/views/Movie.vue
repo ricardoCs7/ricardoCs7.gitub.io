@@ -1,25 +1,28 @@
 <template>
   <div id="infoPeli" class="container">
     <div class="row">
-      <div class="col">
+      <div class="col"  style="align-content: center;">
         <img
-          id="foto"
+          id="foto" 
           :src="`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`"
         />
       </div>
-      <div id="resumen" class="col">
+      <div id="titulares" class="col">
         <h1>{{ movie.title }}</h1>
-        <span><b>Duración:</b> {{movie.runtime}} minutos</span>
-        <br>
-        <br>
-        <p>{{ movie.overview }}</p>
+        <h5>Título Original: {{ movie.original_title }}</h5>
+        <span><b>Duración:</b> {{ movie.runtime }} minutos</span>
+        <p id="resumen">{{ movie.overview }}</p>
       </div>
     </div>
     <br />
     <div class="row" id="data">
-      <div class="col"><b>FECHA:</b> {{ movie.release_date }} <i class="bi bi-calendar-event" style="color: red;"></i></div>
       <div class="col">
-        <b>POPULARIDAD: </b> {{ movie.popularity }}<i class="bi bi-hand-thumbs-up"></i>
+        <b>FECHA:</b> {{ movie.release_date }}
+        <i class="bi bi-calendar-event" style="color: red"></i>
+      </div>
+      <div class="col">
+        <b>POPULARIDAD: </b> {{ movie.popularity
+        }}<i class="bi bi-hand-thumbs-up"></i>
       </div>
       <div class="col">
         <b>VALORACION: </b> {{ movie.vote_average }}
@@ -45,13 +48,13 @@
       </div>
     </div>
     <hr />
-   <div class="row">
+    <div class="row">
       <div class="col">
-      <button @click="$router.go(-1)" type="button" class="btn btn-danger">
-        <i class="bi bi-arrow-left-circle"></i> Regresar
-      </button>
+        <button @click="$router.go(-1)" type="button" class="btn btn-danger">
+          <i class="bi bi-arrow-left-circle"></i> Regresar
+        </button>
+      </div>
     </div>
-   </div>
   </div>
   <router-view />
 </template>
@@ -76,7 +79,7 @@ export default {
     return {
       movieId: {},
       movie: {},
-      genres:[],
+      genres: [],
     };
   },
   mounted() {
