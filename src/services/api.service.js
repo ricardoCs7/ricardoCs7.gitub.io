@@ -16,7 +16,7 @@ class ApiService {
     }
     // Retorna las películas mejores valoradas
     getTopRated(currentPage) {
-        return this.resource.get(`top_rated?${this.apiKey}&page=${currentPage}?limit=20`);
+        return this.resource.get(`top_rated?${this.apiKey}&page=${currentPage}`);
     }
     // Retorna una película en específico (según su id)
     getMovie(movieId) {

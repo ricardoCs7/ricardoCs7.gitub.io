@@ -2,6 +2,7 @@
   <section class="movie-grid">
     <MPview v-for="movie in movies" :movie="movie" />
   </section>
+  
 </template>
 <script>
 import apiService from "@/services/api.service";
@@ -20,12 +21,11 @@ export default {
   methods: {
     async getPopular() {
       const { data } = await apiService.getPopular();
-      this.movies = data.results;
+      this.movies = (data.results);
       console.log(data);
     },
   },
 };
 </script>
 <style >
-
 </style>
