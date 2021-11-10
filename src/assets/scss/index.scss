@@ -93,13 +93,13 @@
     margin-bottom: 15px;
 }
 
-h5{
+h5 {
     color: #067397;
 }
 
 #infoPeli {
     margin-top: 70px;
-    #resumen{
+    #resumen {
         margin-top: 20px;
     }
     #foto {
@@ -120,6 +120,20 @@ h5{
         color: darkblue;
         height: 2px;
     }
+    #genero {
+        margin-top: 10px;
+        span {
+            background-color: darkcyan;
+            margin-right: 6px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+
     #data {
         .col {
             padding-top: 8px;
@@ -130,6 +144,9 @@ h5{
             margin-right: 10px;
         }
     }
+}
+.bi-hand-thumbs-up-fill{
+    color: rgba(65, 65, 241, 0.884);
 }
 
 @media (max-width: 710px) {

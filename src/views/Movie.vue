@@ -1,9 +1,9 @@
 <template>
   <div id="infoPeli" class="container">
     <div class="row">
-      <div class="col"  style="align-content: center;">
+      <div class="col" style="align-content: center">
         <img
-          id="foto" 
+          id="foto"
           :src="`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`"
         />
       </div>
@@ -11,6 +11,9 @@
         <h1>{{ movie.title }}</h1>
         <h5>Título Original: {{ movie.original_title }}</h5>
         <span><b>Duración:</b> {{ movie.runtime }} minutos</span>
+        <div id="genero">
+          <span v-for="genre in movie.genres">{{ genre.name }}</span>
+        </div>
         <p id="resumen">{{ movie.overview }}</p>
       </div>
     </div>
@@ -22,7 +25,7 @@
       </div>
       <div class="col">
         <b>POPULARIDAD: </b> {{ movie.popularity
-        }}<i class="bi bi-hand-thumbs-up"></i>
+        }}<i class="bi bi-hand-thumbs-up-fill"></i>
       </div>
       <div class="col">
         <b>VALORACION: </b> {{ movie.vote_average }}
@@ -79,9 +82,9 @@ export default {
     return {
       movieId: {},
       movie: {},
-      genres: [],
     };
   },
+
   mounted() {
     this.movieId = this.$route.params.id;
     this.getMovie();
